@@ -1,0 +1,24 @@
+@import './variable';
+#footer-container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    padding: 50px 0 200px;
+
+    .couple-image {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    img {
+        position: absolute;
+        top: calc(50% - 230px);
+        left: calc(50% - 220px);
+        border-radius: 50%;
+    }
+    }
+}

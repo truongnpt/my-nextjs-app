@@ -1,0 +1,31 @@
+@import './variable';
+#ngay-cuoi {
+    background-repeat: repeat;
+
+    .calendar {
+        .react-calendar {
+            border: none;
+
+            .react-calendar__navigation__label__labelText, .react-calendar__month-view__weekdays__weekday, .react-calendar__tile {
+                font-family: "Patrick Hand", serif;
+            }
+
+            .react-calendar__tile--active {
+                background-color: $colorPink;
+            }
+        }
+    }
+
+    .countdown {
+        .datetime {
+            span {
+                font-family: "Dancing Script", serif;
+                color: $colorPink;
+
+                &:first-child {
+                    font-size: xx-large;
+                }
+            }
+        }
+    }
+}
