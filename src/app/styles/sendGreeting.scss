@@ -1,0 +1,28 @@
+@import './variable';
+#gui-loi-chuc {
+    form {
+        button:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+    .list-mesages {
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $colorPink;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: $colorPink;
+        }
+    }
+}

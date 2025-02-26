@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './variable';
+
+.font-dancing {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, div, span, p {
+  font-family: "Inconsolata", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    color: $colorBlack;
+}
+
+.font-inconsolata {
+  font-family: "Inconsolata", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.font-pacifico {
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-patrick-hand {
+  font-family: "Patrick Hand", serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+.line {
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.line:before {
+  content: "";
+  background: currentColor;
+  width: 35px;
+  height: 1px;
+  position: absolute;
+  left: -50px;
+  top: 9px;
+}
+
+.line:after {
+  content: "";
+  background: currentColor;
+  width: 35px;
+  height: 1px;
+  position: absolute;
+  right: -50px;
+  top: 9px;
+}

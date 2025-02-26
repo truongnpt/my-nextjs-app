@@ -1,0 +1,13 @@
+@import './variable';
+#su-kien-cuoi {
+    position: relative;
+    background-color: $colorBgGray;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 500px;
+    .bg-image {
+        filter: brightness(0.6);
+        background-size: cover;
+        background-position: center;
+    }
+}

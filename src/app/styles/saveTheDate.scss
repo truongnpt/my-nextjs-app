@@ -1,0 +1,36 @@
+@import './variable';
+#ngay-cuoi {
+    background-repeat: repeat;
+
+    .calendar {
+        .react-calendar {
+            border: none;
+
+            .react-calendar__navigation__label__labelText, .react-calendar__month-view__weekdays__weekday, .react-calendar__tile {
+                font-family: "Inconsolata", serif;
+            }
+
+            .react-calendar__tile--active {
+                background-color: transparent;
+                background-image: url('/images/heart-1.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: $colorPink;
+            }
+        }
+    }
+
+    .countdown {
+        .datetime {
+            span {
+                font-family: "Dancing Script", serif;
+                color: $colorPink;
+
+                &:first-child {
+                    font-size: xx-large;
+                }
+            }
+        }
+    }
+}
