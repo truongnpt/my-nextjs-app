@@ -2,10 +2,11 @@
 #header {
     .main-menu {
         a {
-            color: $colorBlack;
             transition: 0.3s ease-in-out;
             &:hover {
-                color: $colorPink;
+                text-shadow: 0 0 10px $colorYellow;
+                color: $colorYellow;
+                font-weight: 600;
             }
         }
     }

@@ -14,14 +14,14 @@ export default function WeddingBox() {
       "Cảm ơn sự yêu mến, trân trọng của bạn đã dành cho ngày vui của chúng tôi!",
   };
   const accountBride = {
-    title: "Mừng cưới đến chú rể",
+    title: "Chú Rể",
     qr_code: "/images/qr-code-1.jpg",
     bank_name: "ACB",
     account_number: "7293007",
     account_name: "Nguyễn Phi Trường",
   };
   const accountGroom = {
-    title: "Mừng cưới đến cô dâu",
+    title: "Cô Dâu",
     qr_code: "/images/qr-code-1.jpg",
     bank_name: "TP Bank",
     account_number: "039729",
@@ -29,7 +29,7 @@ export default function WeddingBox() {
   };
 
   return (
-    <div id="mung-cuoi" className="bg-[#ffd7d7] my-12 py-8">
+    <div id="mung-cuoi" className="my-12 py-8">
       <div className="grid justify-center text-center">
         <div className="flex justify-center mb-4">
           <Image
@@ -40,12 +40,12 @@ export default function WeddingBox() {
           />
         </div>
         <Animation vertical={true} startOffScreen="50px">
-          <h1 className="font-dancing text-5xl font-semibold mb-4">
+          <h1 className="font-dancing text-5xl font-semibold mb-4 text-white">
             {info.title}
           </h1>
         </Animation>
         <Animation vertical={true} startOffScreen="50px">
-          <span className="font-dancing text-2xl font-semibold mb-4">
+          <span className="font-dancing text-2xl font-semibold mb-4 text-white">
             {info.subtext}
           </span>
         </Animation>
@@ -53,7 +53,7 @@ export default function WeddingBox() {
       <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto p-4 md:p-8 text-center">
         <Animation startOffScreen="-100%">
           <div
-            className={`window-animation bg-white w-full border-4 border-[#FCA5A5] p-1 shadow-lg max-w-lg rounded-lg overflow-hidden ${
+            className={`window-animation bg-white w-full border-4 border-[#ac0202] p-1 shadow-lg max-w-lg rounded-2xl overflow-hidden ${
               isOpenBride ? "open" : ""
             }`}
           >
@@ -65,12 +65,12 @@ export default function WeddingBox() {
                 width={200}
                 height={200}
               />
-              <h3 className="font-pacifico text-4xl mt-6 font-semibold text-[#cd282b]">
+              <h3 className="font-dancing text-4xl mt-6 font-semibold text-white">
                 {accountBride.title}
               </h3>
             </div>
             <div className="p-2 flex flex-col items-center justify-center">
-              <h3 className="font-dancing text-4xl mb-4 font-semibold">
+              <h3 className="font-dancing text-4xl mb-4 font-semibold text-[#ac0202]">
                 {accountBride.title}
               </h3>
               <div className="my-4">
@@ -97,7 +97,7 @@ export default function WeddingBox() {
         </Animation>
         <Animation startOffScreen="100%">
           <div
-            className={`window-animation bg-white w-full border-4 border-[#FCA5A5] p-1 shadow-lg max-w-lg rounded-lg overflow-hidden ${
+            className={`window-animation bg-white w-full border-4 border-[#ac0202] p-1 shadow-lg max-w-lg rounded-2xl overflow-hidden ${
               isOpenGroom ? "open" : ""
             }`}
           >
@@ -109,12 +109,12 @@ export default function WeddingBox() {
                 width={200}
                 height={200}
               />
-              <h3 className="font-pacifico text-4xl mt-6 font-semibold text-[#cd282b]">
+              <h3 className="font-dancing text-4xl mt-6 font-semibold text-white">
                 {accountGroom.title}
               </h3>
             </div>
             <div className="p-2 flex flex-col items-center justify-center">
-              <h3 className="font-dancing text-4xl mb-4 font-semibold">
+              <h3 className="font-dancing text-4xl mb-4 font-semibold text-[#ac0202]">
                 {accountGroom.title}
               </h3>
               <div className="my-4">

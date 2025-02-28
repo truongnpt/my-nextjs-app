@@ -112,51 +112,58 @@ export default function SendGreeting() {
           />
         </div>
         <Animation vertical={true} startOffScreen="50px">
-          <h1 className="font-dancing text-5xl font-semibold mb-4">
+          <h1 className="font-dancing text-5xl font-semibold mb-4 text-[#ac0202]">
             {info.title}
           </h1>
         </Animation>
         <Animation vertical={true} startOffScreen="50px">
-          <span className="font-dancing text-2xl font-semibold mb-4">
+          <span className="font-dancing text-2xl font-semibold mb-4 text-[#ac0202]">
             {info.subtext}
           </span>
         </Animation>
       </div>
       <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto p-4 md:p-8">
         <Animation startOffScreen="-100%">
-          <div className="bg-white m-auto w-full md:h-[500px] border-4 border-[#FCA5A5] p-1 shadow-lg rounded-lg overflow-hidden">
+          <div className="bg-[#ac0202] m-auto w-full md:h-[550px] border-4 border-[#ac0202] p-1 shadow-lg rounded-xl overflow-hidden">
             <form onSubmit={handleSubmit} className="h-full">
-              <div className="mx-auto h-full border-2 p-8 md:p-12 border-[#FCA5A5] flex flex-col rounded-lg overflow-hidden">
+              <div className="mx-auto h-full border-2 p-4 md:p-8 border-white flex flex-col rounded-xl overflow-hidden">
+                <label className="text-white font-pacifico mb-2">
+                  Tên của bạn*
+                </label>
                 <input
                   name="name"
                   id="name"
                   value={name}
                   type="text"
-                  placeholder="Tên hoặc nickname của bạn*"
-                  className="border-2 border-[#FCA5A5] p-2.5 rounded-md mb-4 outline-none"
+                  className="border-2 border-white p-2.5 rounded-xl mb-4 outline-none text-white"
                   onChange={(e) => setName(e.target.value)}
                 />
+                <label className="text-white font-pacifico mb-2">
+                  Bạn có mối quan hệ gì với cô dâu & chú rễ*
+                </label>
                 <input
                   name="relationship"
                   id="relationship"
                   type="text"
                   value={relationship}
-                  placeholder="Bạn có mối quan hệ gì với cô dâu & chú rễ*"
-                  className="border-2 border-[#FCA5A5] p-2.5 rounded-md mb-4 outline-none"
+                  className="border-2 border-white p-2.5 rounded-xl mb-4 outline-none text-white"
                   onChange={(e) => setRelationship(e.target.value)}
                 />
+                <label className="text-white font-pacifico mb-2">
+                  Lời chúc của bạn*
+                </label>
                 <textarea
                   name="message"
                   id="message"
+                  rows={4}
                   value={message}
-                  placeholder="Lời chúc của bạn*"
-                  className="border-2 border-[#FCA5A5] p-2.5 rounded-md mb-4 h-24 outline-none"
+                  className="border-2 border-white p-2.5 rounded-xl mb-4 outline-none text-white"
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
 
                 <button
                   disabled={loading || !(name && relationship && message)}
-                  className="bg-[#FCA5A5] w-full text-white mt-4 py-3 px-4 mx-auto hover:bg-[#FECACA] rounded-full overflow-hidden"
+                  className="bg-white font-pacifico w-full text-[#ac0202] mt-4 py-3 px-4 mx-auto hover:bg-[#ac0202] hover:text-white border-2 border-[#ffae00] rounded-xl overflow-hidden"
                 >
                   {loading ? "Đang gửi..." : "Gửi Lời Chúc →"}
                 </button>
@@ -165,14 +172,14 @@ export default function SendGreeting() {
           </div>
         </Animation>
         <Animation startOffScreen="100%">
-          <div className="bg-white m-auto w-full md:h-[500px] border-4 border-[#FCA5A5] p-1 shadow-lg rounded-lg overflow-hidden">
-            <div className="border-2 p-2 h-full border-[#FCA5A5] flex flex-col rounded-lg overflow-hidden">
-              <h3 className="font-dancing text-3xl mb-4 text-left font-semibold">
+          <div className="bg-white m-auto w-full md:h-[550px] border-4 border-[#ac0202] p-1 shadow-lg rounded-xl overflow-hidden">
+            <div className="border-2 p-2 h-full border-[#ac0202] flex flex-col rounded-xl overflow-hidden">
+              <h3 className="font-dancing text-3xl mb-4 text-left font-semibold text-[#ac0202]">
                 Lời chúc từ mọi người
               </h3>
               <div
                 className="list-mesages px-2"
-                style={{ height: 400, overflow: "auto" }}
+                style={{ height: 550, overflow: "auto" }}
               >
                 {listMessages &&
                   listMessages.map((item, index) => (
@@ -193,7 +200,7 @@ export default function SendGreeting() {
                       </div>
                       <div className="w-full text-left">
                         <div className="flex items-center justify-between">
-                          <span className="flex text-left text-md font-patrick-hand font-semibold">
+                          <span className="flex text-left text-md font-pacifico font-semibold">
                             {item.name}
                           </span>
                           <span className="relative text-left text-xs font-semibold text-gray-500">

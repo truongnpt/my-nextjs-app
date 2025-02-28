@@ -12,11 +12,11 @@
 
             .react-calendar__tile--active {
                 background-color: transparent;
-                background-image: url('/images/heart-1.png');
+                background-image: url('/images/heart-2.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
-                color: $colorPink;
+                color: $colorRed;
             }
         }
     }
@@ -25,7 +25,7 @@
         .datetime {
             span {
                 font-family: "Dancing Script", serif;
-                color: $colorPink;
+                color: $colorRed;
 
                 &:first-child {
                     font-size: xx-large;

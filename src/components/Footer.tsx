@@ -4,10 +4,7 @@ import Animation from "./Animation";
 
 export default function Footer() {
   return (
-    <div
-      id="footer-container"
-      style={{ backgroundImage: `url('images/bg-footer.png')` }}
-    >
+    <div id="footer-container">
       <div className="">
         <div className="flex flex-col gap-8 items-center justify-center">
           <div
@@ -25,7 +22,14 @@ export default function Footer() {
             />
           </div>
           <Animation vertical={true} startOffScreen="50px">
-            <h3 className="font-dancing text-6xl md:text-8xl">Thank you!</h3>
+            <h3 className="font-dancing text-6xl md:text-8xl text-white">
+              Thank you!
+            </h3>
+          </Animation>
+          <Animation vertical={true} startOffScreen="50px">
+            <span className="font-dancing text-center text-2xl font-semibold mb-4 text-white">
+              Sự hiện diện của bạn làm niềm vinh dự của gia đình chúng tôi!
+            </span>
           </Animation>
         </div>
       </div>

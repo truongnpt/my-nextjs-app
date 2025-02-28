@@ -112,8 +112,8 @@ export default function EventWedding() {
             vertical={true}
             startOffScreen={`${50 * index}px`}
           >
-            <div className="p-4 bg-white text-center rounded-lg overflow-hidden">
-              <h1 className="font-dancing text-3xl font-semibold mb-4">
+            <div className="p-4 bg-[#ac0202] text-center rounded-xl overflow-hidden">
+              <h1 className="font-dancing text-3xl font-semibold mb-4 text-white">
                 {event.name}
               </h1>
               <Image
@@ -121,13 +121,16 @@ export default function EventWedding() {
                 alt={event.image.alt}
                 width={event.image.width}
                 height={event.image.height}
+                className="rounded-xl overflow-hidden"
               />
-              <span className="flex justify-center font-semibold my-4">
+              <span className="flex justify-center font-semibold my-4 text-white">
                 {event.time}
               </span>
-              <span className="flex justify-center my-4">{event.address}</span>
+              <span className="flex justify-center my-4 text-white">
+                {event.address}
+              </span>
               <button
-                className="w-full rounded-full text-white py-2 px-4 mt-4 bg-[#FCA5A5] hover:bg-[#FECACA]"
+                className="w-full rounded-full text-[#ac0202] py-2 px-4 mt-4 bg-white hover:bg-[#ac0202] hover:text-white border-2 border-[#ac0202] hover:border-2 hover:border-white"
                 onClick={() => handleClick(event.link_google_map)}
               >
                 Xem Bản Đồ

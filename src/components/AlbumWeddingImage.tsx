@@ -188,12 +188,12 @@ export default function AlbumWeddingImage() {
           />
         </div>
         <Animation vertical={true} startOffScreen="50px">
-          <h1 className="font-dancing text-5xl font-semibold mb-4">
+          <h1 className="font-dancing text-5xl font-semibold mb-4 text-white">
             {info.title}
           </h1>
         </Animation>
         <Animation vertical={true} startOffScreen="50px">
-          <span className="font-dancing text-2xl font-semibold mb-4">
+          <span className="font-dancing text-2xl font-semibold mb-4 text-white">
             {info.subtext}
           </span>
         </Animation>

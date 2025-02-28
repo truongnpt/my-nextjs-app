@@ -76,21 +76,19 @@ export default function SaveTheDate() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-4 md:p-8 text-center">
         <Animation startOffScreen="-100%">
-          <div className="bg-white p-4 md:p-10 shadow-lg w-50 mx-auto rounded-lg overflow-hidden">
-            <div className="mx-auto border-4 p-4 md:p-12 rounded-lg overflow-hidden">
-              <h1 className="font-dancing text-5xl font-semibold text-center mb-4">
+          <div className="bg-white border-4 border-[#ac0202] p-4 md:p-8 shadow-lg w-50 mx-auto rounded-2xl overflow-hidden">
+            <div className="mx-auto bg-[#ac0202] border-4 border-[#ac0202] px-4 md:px-6 py-4 md:py-12 rounded-2xl overflow-hidden">
+              <h1 className="font-dancing text-2xl font-semibold text-center mb-4 text-white">
                 {info.saveTheDate}
               </h1>
-              <h2 className="text-xl text-center mb-4 text-gray-500">
-                {info.of}
-              </h2>
-              <h3 className="font-pacifico text-3xl font-bold text-center mb-6">
+              <h2 className="text-xl text-center mb-4 text-white">{info.of}</h2>
+              <h3 className="font-dancing text-5xl font-bold text-center mb-6 text-white">
                 {info.boy} & {info.girl}
               </h3>
-              <p className="text-center mb-8">{info.subtext}</p>
+              <p className="text-center mb-8 text-white">{info.subtext}</p>
               <a
                 href="#gui-loi-chuc"
-                className="relative bg-[#FCA5A5] flex items-center justify-center text-white rounded-full py-2 md:py-4 px-4 mx-auto hover:bg-[#FECACA]"
+                className="relative bg-white border-2 border-[#ac0202] flex items-center justify-center text-[#ac0202] rounded-full py-2 md:py-4 px-4 mx-auto hover:bg-[#ac0202] hover:text-white hover:border-2 hover:border-white"
               >
                 {info.message} →
               </a>
@@ -98,12 +96,12 @@ export default function SaveTheDate() {
           </div>
         </Animation>
         <Animation startOffScreen="100%">
-          <div className="bg-white h-full p-4 md:p-12 shadow-lg w-full mx-auto rounded-lg overflow-hidden">
-            <div className="border-4 rounded-lg overflow-hidden">
+          <div className="bg-[#ac0202] h-full p-4 md:p-8 shadow-lg w-full mx-auto rounded-2xl overflow-hidden">
+            <div className="border-4 bg-white border-[#ac0202] rounded-2xl overflow-hidden box-shadow-lg">
               <div className="calendar">
                 <Calendar className="font-pacifico" value={value} />
               </div>
-              <div className="countdown border-t mt-4 py-4">
+              <div className="countdown border-t border-[#ac0202]/20 mt-4 py-4">
                 <Countdown date={value} renderer={renderer} />
               </div>
             </div>
